@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  web:
+    image: myflask-app:latest
+    ports:
+      - "5004:5000"
+    environment:
+      FLASK_RUN_PORT: 5004  # Set the Flask run port
+    networks:
+      - flask_network
+
+networks:
+  flask_network:
+    driver: bridge
