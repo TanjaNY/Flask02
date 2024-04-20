@@ -5,24 +5,24 @@ import os
 
 app = Flask(__name__)
 
-# Database connection configuration
+# Konfiguration der Datenbankverbindung
 BASE_DIR = os.getcwd()
 db_path = os.path.join(BASE_DIR, "circle_calculations.db")
 
 
 def get_db_connection():
     """
-    Establishes a connection to the SQLite database.
-    Returns:
-        A sqlite3.Connection object representing the connection to the database.
+    Stellt eine Verbindung zur SQLite-Datenbank her.
+    Rückgabe:
+        Ein sqlite3.Connection-Objekt, das die Verbindung zur Datenbank darstellt.
     """
     conn = sqlite3.connect(db_path)
-    conn.row_factory = sqlite3.Row  # Allows accessing data by column names
+    conn.row_factory = sqlite3.Row  # Ermöglicht den Zugriff auf Daten nach Spaltennamen
     return conn
 
 def create_table():
     """
-    Creates the 'calculations' table in the SQLite database if it doesn't already exist.
+    Erstellt die Tabelle 'calculations' in der SQLite-Datenbank, wenn sie noch nicht vorhanden ist.
     """
     conn = get_db_connection()
     conn.execute('''CREATE TABLE IF NOT EXISTS calculations (
@@ -53,7 +53,7 @@ def calculate():
         radius = float(request.form['radius'])
         area = round(3.14159 * radius ** 2, 2)
 
-        # Save calculation result and timestamp to database
+        # Speichert das Berechnungsergebnis und den Zeitstempel in der Datenbank
         conn = get_db_connection()
         cursor = conn.cursor()
         cursor.execute('INSERT INTO calculations (radius, area, timestamp) VALUES (?, ?, ?)',
@@ -63,7 +63,7 @@ def calculate():
 
         return render_template('index.html', radius=radius, result=area, success=True)
     except ValueError:
-        return render_template('index.html', result=None, error="Invalid input")
+        return render_template('index.html', result=None, error="Ungültige Eingabe")
 
 
 @app.route('/delete/<int:calculation_id>', methods=['GET', 'POST'])
@@ -76,19 +76,20 @@ def delete(calculation_id):
         conn.close()
         return redirect(url_for('index'))
     else:
-        # Display confirmation page before deletion (optional)
+        # Anzeige der Bestätigungsseite vor der Löschung (optional)
         return render_template('delete.html', calculation_id=calculation_id)
 
 
 if __name__ == '__main__':
-    # Establish a connection to the database
+    # Stellt eine Verbindung zur Datenbank her
     conn = get_db_connection()
 
-    # Create table only if it doesn't exist
+    # Erstellt die Tabelle nur, wenn sie nicht vorhanden ist
     create_table()
 
-    # Close the connection after creating the table
+    # Schließt die Verbindung nach dem Erstellen der Tabelle
     conn.close()
 
-    # Run the Flask application
-    app.run(debug=True)
+    # Startet die Flask-Anwendung
+   
+    app.run(host='0.0.0.0', port=5005, debug=True)
