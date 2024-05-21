@@ -22,6 +22,107 @@ Es gibt mehrere Gründe, warum SQLite für eine kleine und leichte Flask-Anwendu
 Im Allgemeinen bietet SQLite eine einfache, effiziente und kostengünstige Möglichkeit zum Speichern und Verwalten von Daten in kleinen und leichten Flask-Anwendungen.
 In unserer Anwendung haben wir uns für die Verwendung von SQLite entschieden und benötigen daher keinen Datenbankcontainer. Allerdings müsste bei der Verwendung anderer Datenbanken wie MySQL oder PostgreSQL ein Datenbankcontainer eingerichtet werden. In diesem Fall müsste die Datei docker-compose.yaml bzw. compose.yaml angepasst werden, um den Datenbankcontainer hinzuzufügen.
 
+## 2. Integration von SQLite
+Vorbereitungen:
+
+Stellen Sie sicher, dass Sie die sqlite3-Bibliothek installiert haben:
+
+Bash
+pip install sqlite3
+Use code with caution.
+content_copy
+Aktualisieren der Datei app.py:
+
+Die Datei app.py enthält den Hauptcode unserer Anwendung. Wir aktualisieren sie nun für die SQLite-Integration.
+
+Änderungen in app.py:
+
+Importieren der Bibliothek:
+
+Python
+import sqlite3
+Use code with caution.
+content_copy
+Verbinden zur Datenbank:
+
+Python
+conn = sqlite3.connect('flask_app.db')
+c = conn.cursor()
+Use code with caution.
+content_copy
+Tabelle calculations erstellen:
+
+Python
+c.execute('''CREATE TABLE IF NOT EXISTS calculations (
+                radius REAL,
+                area REAL
+            )''')
+Use code with caution.
+content_copy
+Speichern von Berechnungsergebnissen:
+
+Python
+def save_calculation(radius, area):
+    c.execute('INSERT INTO calculations (radius, area) VALUES (?, ?)', (radius, area))
+    conn.commit()
+Use code with caution.
+content_copy
+Abrufen gespeicherter Ergebnisse:
+
+Python
+def get_calculations():
+    c.execute('SELECT * FROM calculations')
+    return c.fetchall()
+Use code with caution.
+content_copy
+Löschen von Berechnungseinträgen:
+
+Python
+def delete_calculation(calculation_id):
+    c.execute('DELETE FROM calculations WHERE id = ?', (calculation_id,))
+    conn.commit()
+Use code with caution.
+content_copy
+Anpassen der Routen:
+
+Aktualisieren Sie die Routen / und /calculate für die neuen Funktionen.
+
+Aktualisieren der Datei templates/index.html:
+
+Die Datei index.html enthält die HTML-Vorlage. Wir aktualisieren sie, um die gespeicherten Ergebnisse anzuzeigen und das Löschen einzelner Einträge zu ermöglichen.
+
+Änderungen in index.html:
+
+Abschnitt zum Anzeigen gespeicherter Berechnungen:
+
+HTML
+{% if calculations %}
+    <h2>Gespeicherte Berechnungen</h2>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Radius</th>
+                <th>Fläche</th>
+                <th>Aktion</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for calculation in calculations %}
+                <tr>
+                    <td>{{ calculation.radius }}</td>
+                    <td>{{ calculation.area }}</td>
+                    <td>
+                        <a href="/delete/{{ calculation.id }}">Löschen</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endif %}
+Use code with caution.
+content_copy
+
+
 ## 2. app.py erwetern
 Am besten öffnen wir beide Dateien app.py (Flask01) und app.py(Flask02) und vergleichen die beide.
 Die zwei Versionen der Flask-Anwendung unterscheiden sich im Wesentlichen durch die Integration einer SQLite-Datenbank in der zweiten Version. Hier sind die wichtigsten Unterschiede:
