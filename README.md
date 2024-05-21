@@ -5,7 +5,7 @@
 Das ist die zweite Flask-Lektion, die erste Lektion findest du hier:https://github.com/TanjaNY/Flask
 
 
-## 1.Hinzufügen einer Datenbank zur Anwendung
+## 1. Hinzufügen einer Datenbank zur Anwendung
 Wir haben eine Web-Anwendung erstellt. Jetzt möchten wir alle Ergebnisse speichern. Dafür benötigen wir eine Datenbank. Wir werden SQLite verwenden.
 
 ## Was ist SQLite?
@@ -20,8 +20,9 @@ Es gibt mehrere Gründe, warum SQLite für eine kleine und leichte Flask-Anwendu
 - **Portabilität:** SQLite-Datenbanken sind in einer einzigen Datei gespeichert, was sie leicht zu verschieben und zu verwalten macht. Dadurch können Sie die Datenbank problemlos zwischen verschiedenen Systemen und Entwicklungsumgebungen verschieben.
 
 Im Allgemeinen bietet SQLite eine einfache, effiziente und kostengünstige Möglichkeit zum Speichern und Verwalten von Daten in kleinen und leichten Flask-Anwendungen.
+In unserer Anwendung haben wir uns für die Verwendung von SQLite entschieden und benötigen daher keinen Datenbankcontainer. Allerdings müsste bei der Verwendung anderer Datenbanken wie MySQL oder PostgreSQL ein Datenbankcontainer eingerichtet werden. In diesem Fall müsste die Datei docker-compose.yaml bzw. compose.yaml angepasst werden, um den Datenbankcontainer hinzuzufügen.
 
-## 2.app.py erwetern
+## 2. app.py erwetern
 Am besten öffnen wir beide Dateien app.py (Flask01) und app.py(Flask02) und vergleichen die beide.
 Die zwei Versionen der Flask-Anwendung unterscheiden sich im Wesentlichen durch die Integration einer SQLite-Datenbank in der zweiten Version. Hier sind die wichtigsten Unterschiede:
 ## Erste Version
@@ -46,3 +47,40 @@ Mehrere neue Routen:
 '/ delete/<int:calculation_id>' zum Löschen eines bestimmten Eintrags aus der Datenbank.
 
 Im Allgemeinen bietet die zweite Version eine bessere Datenverwaltung durch die Integration einer SQLite-Datenbank. Diese ermöglicht das Speichern, Abfragen und Löschen von Berechnungsergebnissen, was die Funktionalität der Anwendung erweitert und sie für komplexere Anwendungsfälle geeignet macht.
+
+## 3. Die Anwendung starten.
+
+- Navigiere zum Verzeichnis der geklonten Flask-Anwendung.
+- Aktiviere die Conda-Umgebung mit dem Befehl:
+
+```bash
+flask_env\Scripts\activate
+```
+- Stare  die Flask-Anwendung
+```bash
+flask run
+```
+
+- Dadurch wird die Anwendung gestartet und ist standardmäßig unter http://localhost verfügbar. Die Adresse wird nach dem Start angezeigt.
+
+
+
+
+  
+
+
+
+![](https://github.com/TanjaNY/Flask/blob/main/pics/Flask02.png?raw=true)
+
+
+
+
+
+
+
+
+-Öffne deinen Webbrowser und gib die Adresse http://localhost:5005 in die Adressleiste ein, um deine Anwendung zu sehen.
+
+Beobachte die Veränderungen.
+
+
