@@ -81,8 +81,11 @@ flask run
 
 
 
-Beobachte die Veränderungen.
+### Wie veränderte sich die Anwendung
 
 ![](https://github.com/TanjaNY/Flask/blob/main/pics/Flask003.png?raw=true)
+
+
+Du kannst noch mal mit dem Containesieren probieren.
 
 
