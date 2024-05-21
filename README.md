@@ -25,10 +25,10 @@ Im Allgemeinen bietet SQLite eine einfache, effiziente und kostengünstige Mögl
 Am besten öffnen wir beide Dateien app.py (Flask01) und app.py(Flask02) und vergleichen die beide.
 Die zwei Versionen der Flask-Anwendung unterscheiden sich im Wesentlichen durch die Integration einer SQLite-Datenbank in der zweiten Version. Hier sind die wichtigsten Unterschiede:
 ## Erste Version
-Einfache Flask-Anwendung mit zwei Routen:
-/ zum Rendern der Index-Seite
-/calculate zur Verarbeitung einer POST-Anfrage mit dem Radius und dem Rendern der Ergebnisse auf der Index-Seite.
-Kein Speichern von Daten in einer Datenbank.
+#Einfache Flask-Anwendung mit zwei Routen:
+#/ zum Rendern der Index-Seite
+#/calculate zur Verarbeitung einer POST-Anfrage mit dem Radius und dem Rendern der Ergebnisse auf der Index-Seite.
+#Kein Speichern von Daten in einer Datenbank.
 ## Zweite Version
 Integration einer SQLite-Datenbank zum Speichern von Daten.
 Mehrere Funktionen zur Verbindungsherstellung mit der Datenbank und Tabelle calculations.
