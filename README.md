@@ -61,62 +61,13 @@ flask_env\Scripts\activate
 flask run
 ```
 
-''''''''''
 -Öffne deinen Webbrowser und gib die Adresse [http://127.0.0.1:5000](http://127.0.0.1:5000) in die Adressleiste ein, um deine Anwendung zu sehen.
-
-
-  
-
-
-
-
-
-
 
 <p><img src="https://github.com/TanjaNY/Flask/blob/main/pics/Flask02.png" alt="Flask App" /></p>
 
-
-
-
-
-
-
-
-
-
-### Wie veränderte sich die Anwendung
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Wir können beobachten wie veränderte sich unsere Anwendung.
 
 ![](https://github.com/TanjaNY/Flask/blob/main/pics/Flask003.png?raw=true)
-
-
-
-
 
 
 ### Du kannst noch mal mit dem Containesieren probieren.
