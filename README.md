@@ -29,15 +29,20 @@ Die zwei Versionen der Flask-Anwendung unterscheiden sich im Wesentlichen durch 
 
 -/ zum Rendern der Index-Seite
 
--/calculate zur Verarbeitung einer POST-Anfrage mit dem Radius und dem Rendern der Ergebnisse auf der Index-Seite.
+-/  calculate zur Verarbeitung einer POST-Anfrage mit dem Radius und dem Rendern der Ergebnisse auf der Index-Seite.
 
--Kein Speichern von Daten in einer Datenbank.
+-  Kein Speichern von Daten in einer Datenbank.
 
 ## Zweite Version
-Integration einer SQLite-Datenbank zum Speichern von Daten.
+### Integration einer SQLite-Datenbank zum Speichern von Daten.
+
 Mehrere Funktionen zur Verbindungsherstellung mit der Datenbank und Tabelle calculations.
 Mehrere neue Routen:
+
 / zum Rendern der Index-Seite mit allen gespeicherten Berechnungsergebnissen aus der Datenbank.
+
 /calculate zur Verarbeitung einer POST-Anfrage, Speichern des Berechnungsergebnisses in der Datenbank und Rendern der Ergebnisse auf der Index-Seite.
+
 /delete/<int:calculation_id> zum Löschen eines bestimmten Eintrags aus der Datenbank.
+
 Im Allgemeinen bietet die zweite Version eine bessere Datenverwaltung durch die Integration einer SQLite-Datenbank. Diese ermöglicht das Speichern, Abfragen und Löschen von Berechnungsergebnissen, was die Funktionalität der Anwendung erweitert und sie für komplexere Anwendungsfälle geeignet macht.
