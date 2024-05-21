@@ -61,22 +61,6 @@ flask_env\Scripts\activate
 flask run
 ```
 
-- Dadurch wird die Anwendung gestartet und ist standardmäßig unter http://localhost verfügbar. Die Adresse wird nach dem Start angezeigt.
-
-
-
-
-  
-
-
-
-![](https://github.com/TanjaNY/Flask/blob/main/pics/Flask02.png?raw=true)
-
-
-
-
-
-
 
 
 -Öffne deinen Webbrowser und gib die Adresse [http://127.0.0.1:5000](http://127.0.0.1:5000) in die Adressleiste ein, um deine Anwendung zu sehen.
@@ -95,7 +79,7 @@ flask run
 
 
 
--Öffne deinen Webbrowser und gib die Adresse http://localhost:5005 in die Adressleiste ein, um deine Anwendung zu sehen.
+
 
 Beobachte die Veränderungen.
 
