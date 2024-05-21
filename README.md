@@ -74,7 +74,8 @@ flask run
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 
-![](https://github.com/TanjaNY/Flask/blob/main/pics/Flask003.png?raw=true)
+![](https://github.com/TanjaNY/Flask/blob/main/pics/Flask003.png width="400" 
+     height="500"?raw=true)
 
 <p>&nbsp;</p>
 ### Du kannst noch mal mit dem Containesieren probieren.
