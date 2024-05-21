@@ -55,6 +55,12 @@ Im Allgemeinen bietet die zweite Version eine bessere Datenverwaltung durch die 
 
 ```bash
 flask_env\Scripts\activate
+
+oder mit Anaconda
+
+```bash
+conda activate flask_env
+```
 ```
 - Stare  die Flask-Anwendung
 ```bash
