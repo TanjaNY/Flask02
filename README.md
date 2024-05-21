@@ -95,6 +95,24 @@ flask run
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ![](https://github.com/TanjaNY/Flask/blob/main/pics/Flask003.png?raw=true)
 
 
