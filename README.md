@@ -63,15 +63,15 @@ flask run
 
 -Öffne deinen Webbrowser und gib die Adresse [http://127.0.0.1:5000](http://127.0.0.1:5000) in die Adressleiste ein, um deine Anwendung zu sehen.
 
-&nbsp;&nbsp;&nbsp;&nbsp
+&nbsp
 
-<p><img src="https://github.com/TanjaNY/Flask/blob/main/pics/Flask02.png" alt="Flask App" /></p>
+<p><img src="https://github.com/TanjaNY/Flask/blob/main/pics/Flask02.png" alt="Flask App" &nbsp;&nbsp;&nbsp;&nbsp /></p>
 
-&nbsp;&nbsp;&nbsp;&nbsp
+
 
 ### Wir können beobachten wie veränderte sich unsere Anwendung.
 
-&nbsp;&nbsp;&nbsp;&nbsp
+
 
 ![](https://github.com/TanjaNY/Flask/blob/main/pics/Flask003.png?raw=true)
 
