@@ -72,6 +72,9 @@ flask run
 ### Wir können beobachten wie veränderte sich unsere Anwendung.
 
 <p>&nbsp;</p>
+
+<p><img src="https://github.com/TanjaNY/Flask/blob/main/pics/flask01.png" widht="100" height="200" alt="Flask App" &nbsp;&nbsp;&nbsp;&nbsp /></p>
+<p>&nbsp;</p>
 <p>&nbsp;</p>
 
 
