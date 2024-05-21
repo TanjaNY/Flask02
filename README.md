@@ -72,7 +72,7 @@ flask run
 
 ![](https://github.com/TanjaNY/Flask/blob/main/pics/Flask02.png?raw=true)
 
-
+<p><img src="https://github.com/TanjaNY/Flask/blob/main/pics/Flask02.png" alt="Flask App" /></p>
 
 
 
