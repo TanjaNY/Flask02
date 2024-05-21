@@ -70,7 +70,9 @@ flask run
 
 
 
-![](https://github.com/TanjaNY/Flask/blob/main/pics/Flask02.png?raw=true)
+
+
+
 
 <p><img src="https://github.com/TanjaNY/Flask/blob/main/pics/Flask02.png" alt="Flask App" /></p>
 
@@ -81,11 +83,25 @@ flask run
 
 
 
+
+
 ### Wie veränderte sich die Anwendung
+
+
+
+
+
+
+
+
 
 ![](https://github.com/TanjaNY/Flask/blob/main/pics/Flask003.png?raw=true)
 
 
-Du kannst noch mal mit dem Containesieren probieren.
+
+
+
+
+### Du kannst noch mal mit dem Containesieren probieren.
 
 
