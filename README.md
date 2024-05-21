@@ -76,6 +76,9 @@ flask run
 
 ![](https://github.com/TanjaNY/Flask/blob/main/pics/Flask003.png)
 
+<p><img src="https://github.com/TanjaNY/Flask/blob/main/pics/Flask02.png widht=400 height="500" " alt="Flask App" &nbsp;&nbsp;&nbsp;&nbsp /></p>
+
+
 <p>&nbsp;</p>
 ### Du kannst noch mal mit dem Containesieren probieren.
 
