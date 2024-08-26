@@ -1,5 +1,5 @@
 
-# Eine Flask-Anwendung erstellen
+# Richtige Datenbank für die Anwendung auswählen
 
 # Flask02
 Das ist die zweite Flask-Lektion, die erste Lektion findest du hier:https://github.com/TanjaNY/Flask
