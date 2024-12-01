@@ -57,6 +57,28 @@ Werkzeug stellt somit eine wichtige Infrastruktur für die Entwicklung von Web-A
 pip install flask 
 pip install Werkzeug 
 ```
+## c. Warum brauchen wir eine Python-Umgebung?:
+
+### Hauptgründe für separate Umgebungen
+Die Hauptmotivation für separate Entwicklungsumgebungen liegt in der Isolierung von Projektabhängigkeiten. Jedes Softwareprojekt hat unterschiedliche Anforderungen an Bibliotheken und deren Versionen. Wenn Pakete global installiert werden, entstehen schnell Konflikte zwischen verschiedenen Projekten.
+Vorteile von isolierten Umgebungen
+
+### Versionskompatibilität
+Unterschiedliche Projekte benötigen oft verschiedene Versionen derselben Bibliothek. Eine isolierte Umgebung ermöglicht es, genau die benötigten Versionen zu installieren, ohne andere Projekte zu beeinträchtigen.
+Sauberkeit und Übersichtlichkeit
+Virtuelle Umgebungen halten das globale Python-System sauber. Alle projektspezifischen Abhängigkeiten werden separat verwaltet, was die Übersicht und Wartbarkeit erhöht.
+Reproduzierbarkeit
+Durch die Dokumentation der Abhängigkeiten in einer Datei wie requirements.txt kann das Projekt exakt reproduziert werden - auf jedem Computer und von jedem Entwickler.
+
+### Installationsmethoden
+Es gibt zwei Hauptmethoden zur Abhängigkeitsverwaltung:
+
+Direkte Installation aller Pakete in der Umgebung
+Verwendung einer requirements.txt-Datei zur Paketverwaltung
+
+Bei kleineren Projekten wie unserem, mit wenigen Abhängigkeiten, ist die direkte Installation oft am einfachsten. Die requirements.txt bietet jedoch den Vorteil der besseren Dokumentation und Versionskontrolle.
+
+Eine gut gepflegte Python-Umgebung ist der Schlüssel zu stabilen, wartbaren und portablen Softwareprojekten. Sie verhindert Konflikte, erleichtert die Zusammenarbeit und sorgt für Konsistenz über verschiedene Entwicklungssysteme hinweg.
 
 ## 1. Hinzufügen einer Datenbank zur Anwendung
 Wir haben eine Web-Anwendung erstellt. Jetzt möchten wir alle Ergebnisse speichern. Dafür benötigen wir eine Datenbank. Wir werden SQLite verwenden.
