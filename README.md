@@ -240,7 +240,7 @@ flask_env\Scripts\activate
 flask run
 ```
 
-Wir öffnen unser Webbrowser und geben die Adresse [http://127.0.0.1:5000](http://127.0.0.1:5000) in die Adressleiste ein, um unsere Anwendung zu sehen.
+Wir öffnen unser Webbrowser und geben die Adresse [http://127.0.0.1:5005](http://127.0.0.1:5005) in die Adressleiste ein, um unsere Anwendung zu sehen.
 
 <p>&nbsp;</p>
 
