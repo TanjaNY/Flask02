@@ -13,7 +13,7 @@ Das ist die zweite Flask-Lektion, die erste Lektion findest du hier:https://gith
 - Verwende den folgenden Befehl, um das Repository von GitHub zu klonen:
 
 ```bash
-git git clone https://github.com/TanjaNY/Flask02.git
+git clone https://github.com/TanjaNY/Flask02.git
 ```
 Wechsele zum neuen Verzeichnis.
 ```bash
