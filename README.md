@@ -15,6 +15,10 @@ Das ist die zweite Flask-Lektion, die erste Lektion findest du hier:https://gith
 ```bash
 git git clone https://github.com/TanjaNY/Flask02.git
 ```
+Wechsele zum neuen Verzeichnis.
+```bash
+cd Flask02
+```
 
 ### b. Flask-Umgebung erstellen:
 
